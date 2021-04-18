@@ -1,0 +1,7 @@
+<button class="primary-button" 
+        [ngClass]="{'primary-button--blocked': isBlocked, 'btn-icon': hasIcon}"
+        (click)="clickedBtn($event)"
+        [disabled]="disabled">
+    <span *ngIf="!hasIcon">{{text}}</span>
+    <fa-icon *ngIf="hasIcon" [icon]="hasIcon"></fa-icon>
+</button>

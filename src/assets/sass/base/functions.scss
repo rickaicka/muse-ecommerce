@@ -1,0 +1,32 @@
+@import './variables';
+
+$scaleValueDefault: 1;
+$scaleValueGrow: 1.3;
+
+@mixin textStyle($size, $color, $weight, $transform, $isLink: false, $typeText){
+    font-size: calculateRem($size);
+    color: $color;
+    font-weight: $weight;
+    text-transform:  $transform;
+    font-family: headingsType($typeText);
+    @if $isLink{
+        text-decoration: none;
+    }
+};
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@function headingsType($typeText) {
+    @if ($typeText == h1 or $typeText == h2 or $typeText == h3 or $typeText == h4) {
+        @return $fontHeaders;
+    }
+    @if ($typeText == regular) {
+        @return $fontText;
+    }
+    @if ($typeText == accents) {
+        @return $fontAccents;
+    }
+}

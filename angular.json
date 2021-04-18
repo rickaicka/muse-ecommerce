@@ -28,8 +28,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./src/assets/sass/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/assets/sass/base"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -92,8 +98,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./src/assets/sass/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/assets/sass/base"
+              ]
+            },
             "scripts": []
           }
         },
@@ -123,6 +135,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "muse-ecommerce"
+    }
+  },
+  "defaultProject": "muse-ecommerce",
+  "cli": {
+    "analytics": "a51017ea-3df3-432f-843d-4395e6f24494"
+  }
 }

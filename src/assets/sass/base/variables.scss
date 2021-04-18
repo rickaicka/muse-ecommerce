@@ -1,0 +1,72 @@
+$mobile: 430px;
+$mqDesk: 1441px;
+$fontText: 'Montserrat', sans-serif;
+$fontHeaders: 'Shadows Into Light', cursive;
+$fontAccents: 'Cormorant', serif;
+$primaryWhite: #FFFFFF;
+$primaryBlack: #000000;
+$primaryLinear: linear-gradient(
+    90deg, 
+    rgba(228,255,244,1) 0%, 
+    rgba(240,238,253,1) 38%, 
+    rgba(249,233,251,1) 69%, 
+    rgba(255,250,237,1) 99%
+);
+$primaryGreen: #789D8B;
+$primaryBordo: #6C2D2D;
+$primaryRed: #DB4F4F;
+
+$beige: #FBEEE9;
+$gray: #252424;
+$softGray: #A89E9E;
+$lightGray: #908F8F;
+$disabledGray: #E9E9E9;
+$blue: #89B7E8;
+$green: #BDE1DA;
+$museGreen: #E4FFF4;
+$purple: #F1D9F4;
+$lightPurple: #F9E9FB;
+$rose: #EEC7C7;
+$lightRose: #FFDCDC;
+$lightBordo: #B69696;
+$magnolia: linear-gradient(
+    0deg, 
+    rgba(171,95,95,1) 16%, 
+    rgba(68,64,64,1) 58%
+);
+
+// $statsColor: (
+//     'hp': #78C84F,
+//     'attack': rgb(226, 194, 192),
+//     'defense': #6F37F8,
+//     'special-attack': #F75787,
+//     'special-defense':#98D8D8,
+//     'speed': #F8D030,
+//     'accuracy': #B7A037,
+//     'evasion': #A78FF0
+// );
+
+// @each $name, $color in $colors{
+//     .#{ $name } {
+//         background-color: $color;
+//         @if $name == 'electric' {
+//             color : $second-gray !important;
+//         }@else if $name == 'fairy'{
+//             color : $second-gray !important;
+//         }
+//     }
+// }
+
+// @each $name, $color in $colors{
+//     .text-type-#{ $name } {
+//         color: $color !important;
+//     }
+// }
+
+// @each $name, $color in $statsColor{
+//     .mat-type-stats-#{$name}{
+//         .mat-progress-bar-fill::after {
+//             background-color: $color !important;
+//         }
+//     }
+// }

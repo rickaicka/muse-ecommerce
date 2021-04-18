@@ -1,0 +1,35 @@
+@import 'functions';
+
+.primary-button{
+    border: none;    
+    @include textStyle(14px, $primaryWhite, 600, uppercase, false, regular);
+    background-color: $primaryBordo;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    outline: none;
+    &:hover{
+        opacity: .8;
+    }
+    &:disabled{
+        @include textStyle(14px, $gray, 600, uppercase, false, regular);
+        background-color: $disabledGray;
+        cursor: disabled;
+    }
+    &--blocked{        
+        @include textStyle(14px, $gray, 600, uppercase, false, regular);
+        background-color: $lightBordo;
+        &:hover{            
+            opacity: .8;
+        }
+    }
+    &.btn-icon{
+        width: 10%;
+    }
+}

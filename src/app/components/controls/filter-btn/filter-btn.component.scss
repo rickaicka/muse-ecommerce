@@ -1,0 +1,57 @@
+@import 'functions';
+
+.filter-button{
+    border: none;    
+    @include textStyle(12px, $gray, 600, capitalize, false, regular);
+    background-color: $primaryWhite;
+    border-radius: 5px;
+    border: 1px solid $gray;
+    width: 15%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    outline: none;
+    &:hover{
+        background-color: $disabledGray;
+    }
+    &.category{
+        background-color: $lightPurple;
+        border: $purple 1px solid;
+        &:hover{            
+            opacity: .8;
+            background-color: $lightPurple;
+        }
+        &:active{            
+            opacity: 1;
+            background-color: $lightPurple;
+        }
+    }
+    &.price{
+        background-color: $museGreen;
+        border: $green 1px solid;
+        &:hover{            
+            opacity: .8;
+            background-color: $museGreen;
+        }
+        &:active{            
+            opacity: 1;
+            background-color: $museGreen;
+        }
+    }
+    &.stock{
+        background-color: $lightRose;
+        border: $rose 1px solid;
+        &:hover{            
+            opacity: .8;
+            background-color: $lightRose;
+        }
+        &:active{            
+            opacity: 1;
+            background-color: $lightRose;
+        }
+    }
+}

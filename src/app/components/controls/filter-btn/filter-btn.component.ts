@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter-btn',
@@ -9,7 +9,16 @@ export class FilterBtnComponent implements OnInit {
 
   constructor() { }
 
+  @Input() text: String; 
+  @Input() typeFilter: String; 
+  
+  @Output() click = new EventEmitter();
+  
   ngOnInit(): void {
   }
 
+  clickedBtn(event: Event) { 
+    event.stopPropagation();
+    this.click.next(event);
+  }
 }

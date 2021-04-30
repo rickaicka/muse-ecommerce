@@ -1,1 +1,16 @@
-<p>textarea works!</p>
+<div class="textarea-field-container">
+    <textarea
+        class="textarea-field"    
+        [name]="labelTextarea" 
+        [id]="labelTextarea"
+        [placeholder]="placeholderTextarea"
+        (change)="onFocus($event)"
+        (blur)="onBlur($event)"
+        [(ngModel)]="textareaModel"
+        (ngModelChange)="textareaModelChange.emit(textareaModel)"
+    ></textarea>
+</div>
+
+<div class="textarea-error-message" *ngIf="showErrorMessage">
+    <p>{{messageError}}</p>
+</div>

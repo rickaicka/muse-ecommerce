@@ -7,6 +7,12 @@
                         [text]="'Aprovar'"  
                     ></app-primary-btn>
                 </li>
+                <li>
+                    <app-primary-btn 
+                        [text]="'Aprovar'"  
+                        [hasIcon]="'faCheck'"
+                    ></app-primary-btn>
+                </li>
             </ul>
         </div>
     </div>
@@ -15,8 +21,78 @@
         <div class="col-md-3">
             <ul>
                 <li>
-                    <app-filter-btn [text]="'Filtro'" [typeFilter]="'stock'"
-                        (click)="teste()"></app-filter-btn>
+                    <app-filter-btn [text]="'Filtro'" [typeFilter]="'stock'"></app-filter-btn>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <ul style="
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+">
+                <li>
+                    <app-chips-btn 
+                        [text]="'Chips'" 
+                        [typeFilter]="'stock'"
+                        (click)="teste()"></app-chips-btn>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <ul style="
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+">
+                <li>
+                    <app-quantity-btn (click)="testeQuantidade($event)"></app-quantity-btn>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <ul>
+                <li>
+                    <app-input-field 
+                        [labelInput]="'nomeInput'" 
+                        [placeholderInput]="'Nome: '" 
+                        [typeInput]="'password'" 
+                        [isRequired]="true"
+                        [messageError]="'Campo Obrigatorio'"
+                        [hasIcon]="'faCheck'"
+                    ></app-input-field>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <ul>
+                <li>
+                    <app-textarea
+                        [labelTextarea]="'nome'" 
+                        [placeholderTextarea]="'Nome: '" 
+                        [isRequired]="true"
+                        [messageError]="'Campo Obrigatorio'"
+                        [(textareaModel)]="data"
+                    ></app-textarea>
+                </li>
+                
+                <li>
+                    <app-primary-btn 
+                        [text]="'Model'"  
+                        (click)="teste()"
+                    ></app-primary-btn>
                 </li>
             </ul>
         </div>

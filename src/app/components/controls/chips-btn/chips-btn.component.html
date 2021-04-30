@@ -1,1 +1,8 @@
-<p>chips-btn works!</p>
+<button class="chips-button" 
+        [ngClass]="typeFilter"
+        (click)="clickedBtn($event)">
+    <span>{{text}}</span>
+    <a class="close-chip">
+        <fa-icon [icon]="icon"></fa-icon>
+    </a>
+</button>

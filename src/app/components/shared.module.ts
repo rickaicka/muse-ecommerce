@@ -21,6 +21,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { SliderComponent } from './shared/slider/slider.component';
 import { StepperComponent } from './shared/stepper/stepper.component';
+import { FormsModule } from '@angular/forms';
 
 const Components = [  
     PrimaryBtnComponent,
@@ -50,6 +51,7 @@ const Components = [
 ];
 
 const Modules = [
+  FormsModule,
   FontAwesomeModule
 ]
 

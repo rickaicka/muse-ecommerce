@@ -1,0 +1,44 @@
+@import 'functions';
+
+.input-field-container{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.3s;
+    outline: none;
+    & input{        
+        @include textStyle(16px, $lightGray, 700, capitalize, false, regular);
+        border: 2px solid $lightGray;
+        padding: 10px 8px;
+        border-radius: 5px;
+        width: 100%;
+        &:focus-visible{            
+            box-shadow: 0 0 2pt 1pt $primaryBordo;
+            outline: none;
+            border: 2px solid transparent;
+            @include textStyle(16px, $lightGray, 700, capitalize, false, regular);
+        }
+        &.input-error{            
+            box-shadow: 0 0 2pt 1pt $primaryRed;
+            outline: none;
+            border: 2px solid transparent;
+            @include textStyle(16px, $lightGray, 700, capitalize, false, regular);
+        }
+    }    
+    & .input-icon{
+        position: absolute;
+        right: 26px;
+        & .ng-fa-icon{
+            color: $lightBordo
+        }
+    }
+}
+
+.input-error-message{
+    & p{        
+        margin: 6px 0 0;
+        @include textStyle(12px, $primaryRed, 400, capitalize, false, regular);
+    }
+}

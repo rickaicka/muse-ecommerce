@@ -1,1 +1,22 @@
-<p>input-field works!</p>
+<div class="input-field-container">
+    <input 
+        [type]="typeInput" 
+        [name]="labelInput" 
+        [id]="labelInput"
+        [placeholder]="placeholderInput"
+        class="input-field"
+        (change)="onFocus($event)"
+        (blur)="onBlur($event)"
+        [(ngModel)]="inputModel"
+        (ngModelChange)="inputModelChange.emit(inputModel)"
+        >
+    <div class="input-icon" *ngIf="hasIcon">
+        <i>
+            <fa-icon [icon]="hasIcon"></fa-icon>
+        </i>        
+    </div>
+</div>
+
+<div class="input-error-message" *ngIf="showErrorMessage">
+    <p>{{messageError}}</p>
+</div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { EventEmitter, Input, OnInit, Output, Component } from '@angular/core';
 import * as icons from '@fortawesome/free-solid-svg-icons';
 
 @Component({

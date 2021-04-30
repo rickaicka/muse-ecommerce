@@ -1,0 +1,33 @@
+@import 'functions';
+
+.quantity-component{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center; 
+    min-width: 92px;
+    & .decrease-qtt, & .increase-qtt{
+        background-color: $primaryWhite;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        @include textStyle(12px, $rose, 600, capitalize, false, regular);
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0px 0px 6px 1px  rgba(0,0,0,0.34);
+        &:hover{
+            background-color: $primaryWhite;
+            box-shadow: 0px 0px 6px 1px  rgba(0,0,0,0.34);
+            @include textStyle(12px, $lightBordo, 600, capitalize, false, regular);
+        }
+    }
+    & .value-qtt{
+        & p{
+            @include textStyle(16px, $gray, 600, capitalize, false, regular);
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}

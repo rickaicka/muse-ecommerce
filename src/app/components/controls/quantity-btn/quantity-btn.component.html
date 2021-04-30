@@ -1,1 +1,11 @@
-<p>quantity-btn works!</p>
+<div class="quantity-component">
+    <div class="decrease-qtt" *ngIf="valueQuantity > 1" (click)="calculeValueQuantity('decrease', $event)">
+        <fa-icon [icon]="decreaseIcon"></fa-icon>
+    </div>
+    <div class="value-qtt">
+        <p>{{valueQuantity}}</p>
+    </div>
+    <div class="increase-qtt" (click)="calculeValueQuantity('increase', $event)">
+        <fa-icon [icon]="increaseIcon"></fa-icon>
+    </div>
+</div>

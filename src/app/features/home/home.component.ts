@@ -8,12 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
+  public data = ""
 
   ngOnInit(): void {
   }
   
   teste(){
-    console.log('Teste');
+    console.log(this.data)
+  }
+  
+  testeQuantidade(ev){
+    console.log(ev)
   }
 
 }
